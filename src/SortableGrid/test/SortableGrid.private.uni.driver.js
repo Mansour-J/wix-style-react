@@ -1,9 +1,7 @@
-import { sortableGridDriverFactory as publicDriverFactory } from '../SortableGrid.uni.driver';
+import { sortableGridUniDriverFactory as publicDriverFactory } from '../SortableGrid.uni.driver';
 
-export const sortableGridPrivateDriverFactory = (base, body) => {
+export const sortableGridPrivateDriverFactory = base => {
   return {
-    ...publicDriverFactory(base, body),
-
-    // Add here driver methods that considered "private"
+    ...publicDriverFactory(base),
   };
 };

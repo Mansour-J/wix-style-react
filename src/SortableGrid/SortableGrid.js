@@ -6,6 +6,7 @@ import { Draggable } from '../DragAndDrop/Draggable';
 import withDNDContext from './withDNDContext';
 import classNames from 'classnames';
 import styles from './SortableGrid.st.css';
+import { dataHooks } from './constants';
 
 /** component allow you to implement drag and drop in grid layout */
 class SortableGrid extends WixComponent {
@@ -205,7 +206,11 @@ class SortableGrid extends WixComponent {
         <div
           className={classNames(styles.sortableGridContent, contentClassName)}
         >
-          {startFixedElement ? startFixedElement : null}
+          {startFixedElement && (
+            <div data-hook={dataHooks.START_FIXED_ELEMENT}>
+              {startFixedElement}
+            </div>
+          )}
 
           {items.map((item, index) => {
             const isInitialPositionToDrop = indexToInsert === originalIndex;
@@ -245,7 +250,9 @@ class SortableGrid extends WixComponent {
             );
           })}
 
-          {endFixedElement ? endFixedElement : null}
+          {endFixedElement && (
+            <div data-hook={dataHooks.END_FIXED_ELEMENT}>{endFixedElement}</div>
+          )}
         </div>
       </Container>
     );
@@ -306,6 +313,10 @@ SortableGrid.propTypes = {
     }
    */
   listOfPropsThatAffectItems: PropTypes.array,
+  /** Node which will be rendered before draggable items and this element won't be draggable */
+  startFixedElement: PropTypes.node,
+  /** Node which will be rendered after draggable items and this element won't be draggable */
+  endFixedElement: PropTypes.node,
 };
 
 SortableGrid.defaultProps = {};

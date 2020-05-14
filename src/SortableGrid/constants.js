@@ -1,4 +1,4 @@
 export const dataHooks = {
-  sortableGridCount: 'sortableGrid-count',
-  sortableGridButton: 'sortableGrid-button',
+  START_FIXED_ELEMENT: 'start-fixed-element',
+  END_FIXED_ELEMENT: 'end-fixed-element',
 };
