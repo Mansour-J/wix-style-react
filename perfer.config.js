@@ -111,6 +111,7 @@ const javascriptFiles = [
   ['Slider.bundle.min.js', 45],
   ['SocialButton.bundle.min.js', 17],
   ['SocialPreview.bundle.min.js', 9],
+  ['SortableGrid.bundle.min.js', 32],
   ['SortableList.bundle.min.js', 30],
   ['StatisticsWidget.bundle.min.js', 47],
   ['StatisticsWidget.bundle.min.js', 47],
@@ -136,7 +137,6 @@ const javascriptFiles = [
   ['VerticalTabs.bundle.min.js', 13],
   ['VerticalTabsItem.bundle.min.js', 13],
   ['WarningIndicator.bundle.min.js', 40],
-  ['SortableGrid.bundle.min.js', 10],
 ];
 
 const cssFiles = [
@@ -224,6 +224,7 @@ const cssFiles = [
   ['Sidebar.min.css', 2],
   ['Skeleton.min.css', 1],
   ['Slider.min.css', 2],
+  ['SortableGrid.min.css', 1],
   ['StatisticsWidget.min.css', 2],
   ['StatusIndicator.min.css', 1],
   ['Swatches.min.css', 7],
@@ -239,7 +240,6 @@ const cssFiles = [
   ['Tooltip.min.css', 2],
   ['VariableInput.min.css', 2],
   ['WarningIndicator.min.css', 2],
-  ['SortableGrid.min.css', 1],
 ];
 
 const getJS = () =>
